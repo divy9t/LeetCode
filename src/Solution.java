@@ -6,8 +6,15 @@ import java.util.stream.IntStream;
 /* https://leetcode.com/problems/two-sum/ */
 
 
+
 class Solution {
 
+    /***
+     * could get better with dynamic programming approach
+     * @param ints -- the array to find sum from
+     * @param target -- the sum to find
+     * @return array containing the result indexes
+     */
     public int[] twoSum(int[] ints, int target) {
         int[] result = new int[2];
         for (int i = 0; i < ints.length; i++) {
