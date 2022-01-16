@@ -1,11 +1,5 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.IntStream;
 
-/* https://leetcode.com/problems/two-sum/ */
-
-
+/** https://leetcode.com/problems/two-sum/ */
 
 class Solution {
 
