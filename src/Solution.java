@@ -3,6 +3,10 @@
 
 class Solution {
 
+    public static void main(String[] args) {
+
+    }
+
     /***
      * could get better with dynamic programming approach
      * @param ints -- the array to find sum from
