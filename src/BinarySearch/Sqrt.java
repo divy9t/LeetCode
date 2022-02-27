@@ -4,19 +4,19 @@ public class Sqrt {
 
 
     public static void main(String[] args) {
-        System.out.println(linearMethod(36000000));
+        int x = 2147395599;
+        System.out.println(linearMethod(x));
         System.out.println("---------");
-        System.out.println(binarySearchMethod(36000000));
+        System.out.println(binarySearchMethod(x));
     }
 
     public static int linearMethod(int x) {
         long start = System.nanoTime();
         long end = System.nanoTime();
 
-        int range = x / 2;
 
 
-        for (int i = 2; i < range - 1; i++) {
+        for (int i = 2; i < x; i++) {
 
 
             if ((i+1) * (i+1) > x) {
@@ -32,20 +32,20 @@ public class Sqrt {
 
     }
 
-    public static long binarySearchMethod(int x) {
+    public static int binarySearchMethod(int x) {
         long start = System.nanoTime();
         long end;
 
         long left = 0, right = x;
         long ans = 0;
-        while (left < right) {
+        while (left <= right) {
             long mid = (left + (right - left) / 2);
             long square = mid * mid;
 
             if (square == x) {
                 end = System.nanoTime();
                 System.out.println("Binary Search System execution time " + (end - start));
-                return mid;
+                return (int)mid;
             }
 
             if (square > x) right = mid - 1;
@@ -59,7 +59,7 @@ public class Sqrt {
 
         end = System.nanoTime();
         System.out.println("Binary Search System execution time " + (end - start));
-        return ans;
+        return (int) ans;
 
     }
 
